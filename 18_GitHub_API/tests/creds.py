@@ -1,3 +1,3 @@
-GITHUB_ACCESS_TOKEN = "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"
-GITHUB_USER = "TomF777"
+GITHUB_ACCESS_TOKEN = "*** put your GitHub TOKEN here"
+GITHUB_USER = "GitHub Username"
 GITHUB_REPO = "test"
