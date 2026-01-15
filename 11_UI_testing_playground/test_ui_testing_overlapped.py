@@ -1,0 +1,22 @@
+# http://uitestingplayground.com/overlapped
+
+from playwright.sync_api import Page, expect
+
+
+def test_overlapped(page: Page):
+    page.goto("http://uitestingplayground.com/overlapped")
+
+    input = page.get_by_placeholder("Name")
+    div = input.locator("..")
+    div.hover()
+
+    page.mouse.wheel(0, 200)
+
+    data = "sometext"
+    input.fill(data)
+
+    expect(input).to_have_value(data)
+
+
+
+

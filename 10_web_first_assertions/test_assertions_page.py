@@ -1,0 +1,11 @@
+from playwright.sync_api import Page, expect
+
+def test_get_started_link(page: Page):
+    page.goto("https://playwright.dev/python")
+
+    link = page.get_by_role("link", name="GET STARTED")
+    link.click()
+
+    expect(page).to_have_url("https://playwright.dev/python/docs/intro")
+    # another possibility
+    #expect(page).to_have_title("Installation | Playwright Python")
